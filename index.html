@@ -149,65 +149,29 @@ layout:
         </table>
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-
-          {% assign postsByYear =
-            site.categories.items | group_by_exp:"post", "post.date | date: '%Y'" %}
-          
-
-          {% for year in postsByYear %}
-          <tr><td><h3>{{year.name}}</h3></td></tr>
-
-
-
-            {% for post in year.items %}
-
-
-            {% for cat in post.categories %}
-                {% if cat == 'research' %}
-              
+          <tr><td><h3>2024</h3></td></tr>              
 
           <tr>
             <td style="padding:0%;width:27.5%;vertical-align:middle;min-width:120px;">
-              <img src="{{post.image}}" alt="project image" style="height:auto; max-width:100%;" />
+              <img src="assets/teasers/beyond_the_kill_teaser.png" alt="project image" style="height:auto; max-width:100%;" />
             </td>
             <td style="padding:1.5%;width:100%;vertical-align:middle;margin:auto">
-
-              <font style="font-size: 18px;"><b>{{post.title}}</b></font>
+              <font style="font-size: 18px;"><b>Beyond the kill: The allometry of predation behaviours among large carnivores</b></font>
+              <br>
+              <font style="font-size: 14px;">V. P. S. Ritwika, Ajay Gopinathan, Justin D. Yeakel</font>
               <br>
 
-              <font style="font-size: 14px;">{{post.authors}}</font>
-              <br>
-
-              <font style="font-size: 14px;" color="#7a7a7a">{{post.excerpt | remove: '<p>' | remove: '</p>'}}</font>
+              <font style="font-size: 14px;" color="#7a7a7a">We use an energetics approach to investigate the survival advantages of hunting, scavenging and kleptoparasitism as a function of predator, prey and potential competitor body sizes for terrestrial mammalian carnivores.</font>
               <br>
               <br>
 
-
-              <!-- <br> -->
-              <font style="font-size: 14px;"><em>{{post.venue}}</em>, {{ post.date | date: "%Y" }} </font>
+              <font style="font-size: 14px;">
+                <em>The Journal of Animal Ecology</em>, 08 Mar 2024, 93(5):554-566<br>
+                <a href="https://doi.org/10.1111/1365-2656.14070">https://doi.org/10.1111/1365-2656.14070</a>
+              </font>
               <br>
 
-              {% if post.paper %}
-              <a class="button" href="{{post.paper}}"><b>paper</b></a> 
-              {% endif %}
-              {% if post.arxiv %}
-              <a class="button" href="{{post.arxiv}}"><b>arxiv</b></a> 
-              {% endif %}
-              {% if post.tech_report %}
-              <a class="button" href="{{post.tech_report}}"><b>tech report</b></a> 
-              {% endif %}
-              {% if post.video %}
-              <a class="button" href="{{post.video}}"><b>video</b></a> 
-              {% endif %}
-              {% if post.code %}
-              <a class="button" href="{{post.code}}"><b>code</b></a> 
-              {% endif %}
-              {% if post.poster %}
-              <a class="button" href="{{post.poster}}"><b>poster</b></a> 
-              {% endif %}
-              {% if post.slides %}
-              <a class="button" href="{{post.slides}}"><b>slides</b></a> 
-              {% endif %}
+              <a class="button" href="https://europepmc.org/article/med/38459609"><b>article</b></a> 
 
               <p></p>
 
